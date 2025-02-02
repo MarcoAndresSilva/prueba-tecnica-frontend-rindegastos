@@ -14,7 +14,7 @@ Una aplicación web interactiva que permite a los usuarios explorar información
 ## Enlace de la aplicación desplegada 🌐
 
 Puedes probar la aplicación en el siguiente enlace:  
-[**Ver aplicación en vivo**]([https://enlace-a-tu-app-deployada.com](https://prueba-tecnica-rindegastos.netlify.app/))
+[**Ver aplicación en vivo**](https://prueba-tecnica-rindegastos.netlify.app/)
 
 ## Tecnologías utilizadas 🚀
 
