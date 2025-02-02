@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RestCountries App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container my-4">
+        <div class="d-flex justify-content-between align-items-center px-4">
+              <h1 class="mb-0">RestCountries App</h1>
+              <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                  <label class="ms-2">
+                      <i id="darkModeIcon" class="fas fa-sun"></i>
+                  </label>
+              </div>
+        </div>
+        <div class="container my-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center p-3 search-bar">
+                <div class="d-flex flex-grow-1 me-3">
+                    <input type="text" id="searchInput" class="form-control me-2" placeholder="Buscar país...">
+                    <select id="regionFilter" class="form-select">
+                        <option value="">Todas las regiones</option>
+                        <option value="Africa">África</option>
+                        <option value="Americas">América</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europa</option>
+                        <option value="Oceania">Oceanía</option>
+                    </select>
+                </div>
+                <div class="d-flex">
+                    <button id="searchButton" class="btn btn-primary me-2 mt-2">Buscar</button>
+                    <button id="resetButton" class="btn btn-secondary me-2 mt-2">Reset</button>
+                    <button id="toggleViewButton" class="btn btn-secondary me-2 mt-2">Cambiar Vista</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="countriesContainer"></div>
+    </div>
+   
+    <!-- Modal -->
+    <div class="modal fade" id="countryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar los resultados de la búsqueda -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" aria-labelledby="searchResultsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchResultsTitle">Resultados de la Búsqueda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResultsContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/9aa3475a9e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Ignorar archivos de configuración personal
+.zshrc
+
+# Ignorar archivos generados automáticamente
+lazygit.tar.gz
+lazygit
+
+# Ignorar directorios de caché y compilación
+node_modules/
+dist/
+
+# Ignorar archivos temporales de vim
+*~
+
+# Ignorar otros archivos que no desees subir

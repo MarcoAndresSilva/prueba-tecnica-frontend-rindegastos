@@ -1,0 +1,139 @@
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Efecto hover sutil */
+h1:hover {
+    color: #0056b3;
+    border-bottom-color: #0056b3;
+    transform: scale(1.02);
+}
+/* Ajuste para que el switch no esté pegado al borde */
+.form-check.form-switch {
+    margin-right: 20px;
+}
+
+.search-bar {
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo general de las tarjetas */
+.card {
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Ajuste de tamaños */
+#searchInput, #regionFilter {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Espaciado entre elementos */
+.search-bar button {
+    min-width: 100px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+}
+
+.dark-mode .modal-content {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .form-check-input:checked {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+/* Estilo general de las tarjetas */
+.card {
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Asegurar que las imágenes de las tarjetas tengan el mismo tamaño */
+.card-img-top {
+    object-fit: cover; /* Esto asegura que las imágenes no se deformen */
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Ajustar la altura mínima para que las tarjetas tengan la misma altura */
+.card {
+    min-height: 350px; /* Ajusta la altura mínima de las tarjetas */
+}
+
+/* Estilo Grid: 4 columnas en pantallas grandes, 3 en medianas, 2 en pequeñas */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste dinámico */
+    gap: 20px;
+}
+
+/* Estilo Lista: Tarjetas ocupan todo el ancho */
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-view .col-lg-3 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.list-view .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+}
+
+/* Ajustar la imagen en la vista de lista */
+.list-view .card img {
+    width: 250px;
+    height: auto;
+    margin-right: 15px;
+}
