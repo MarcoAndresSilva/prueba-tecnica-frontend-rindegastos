@@ -8,18 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let allCountries = [];
 
-  async function fetchCountries() {
+ async function fetchCountries() {
     try {
-        console.log("Llamando a la API...");
-        const response = await fetch("https://restcountries.com/v3.1/all");
+        countriesContainer.innerHTML = `<div class="text-center"><div class="spinner-border text-primary" role="status"></div></div>`;
+        
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+
         allCountries = await response.json();
-        console.log("Datos recibidos de la API:", allCountries);
         displayCountries(allCountries);
         initSearch();
     } catch (error) {
-        console.error("Error al obtener los países:", error);
+        countriesContainer.innerHTML = `<p class="text-danger">❌ No se pudieron cargar los países.</p>`;
+        console.error(error);
     }
-  }
+}
 
   function initResetButton() {
       const resetButton = document.getElementById("resetButton");
